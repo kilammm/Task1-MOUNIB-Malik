@@ -1,0 +1,224 @@
+# 🌐 Task 3 — Office Network Configuration
+
+---
+
+## 🇬🇧 ENGLISH
+
+### 📝 Description
+This project simulates and documents a small office network with static IP addressing, DNS configuration, shared resources, and automatic daily backups with failure/recovery simulation.
+
+---
+
+### 🛠️ Tools Used
+
+| Tool | Purpose |
+|------|---------|
+| Cisco Packet Tracer | Network simulation |
+| Robocopy | Automatic backups |
+| Windows Task Scheduler | Backup automation |
+| Cisco Packet Tracer | Network diagram |
+
+---
+
+### 🖥️ Network Topology
+
+```
+[PC0] ──────┐
+[PC1] ──────┼──── [Switch] ──── [Server]
+[PC2] ──────┘         │
+                  [Printer]
+```
+
+The full simulation file is available at: `network_topology.pkt`
+
+---
+
+### 📋 IP Address Table
+
+| Device | IP Address | Subnet Mask | Gateway | Role |
+|--------|-----------|-------------|---------|------|
+| Server0 | 192.168.1.1 | 255.255.255.0 | 192.168.1.1 | File Server / DNS |
+| PC0 | 192.168.1.10 | 255.255.255.0 | 192.168.1.1 | Client |
+| PC1 | 192.168.1.11 | 255.255.255.0 | 192.168.1.1 | Client |
+| PC2 | 192.168.1.12 | 255.255.255.0 | 192.168.1.1 | Client |
+| Printer0 | 192.168.1.20 | 255.255.255.0 | 192.168.1.1 | Network Printer |
+
+**Subnet:** 192.168.1.0/24
+
+---
+
+### 🌐 DNS Configuration
+
+DNS Server: **192.168.1.1** (Server0)
+
+| Hostname | IP Address |
+|----------|-----------|
+| server.office | 192.168.1.1 |
+| pc0.office | 192.168.1.10 |
+| pc1.office | 192.168.1.11 |
+| pc2.office | 192.168.1.12 |
+| printer.office | 192.168.1.20 |
+
+---
+
+### 💾 Backup Strategy
+
+#### Tool: Robocopy (Windows)
+
+| Setting | Value |
+|---------|-------|
+| Source | Clients\PC0, Clients\PC1, Clients\PC2 |
+| Destination | Backup\PC0, Backup\PC1, Backup\PC2 |
+| Schedule | Every day at 08:00 |
+| Log file | Backup\backup_log.txt |
+
+#### How to run manually
+```
+scripts\backup.bat
+```
+
+#### Automation
+```
+schtasks /create /tn "DailyBackup" /tr "scripts\backup.bat" /sc daily /st 08:00 /f
+```
+
+---
+
+### 🔥 Failure and Recovery Simulation
+
+#### Simulate failure
+```
+del Clients\PC0\document1.txt
+```
+
+#### Restore from backup
+```
+copy Backup\PC0\document1.txt Clients\PC0\document1.txt
+```
+
+#### Result
+✅ File successfully restored from backup
+
+---
+
+### 📸 Screenshots
+
+All screenshots are available in the `screenshots/` folder:
+- Network topology (Cisco Packet Tracer)
+- IP configuration for each device
+- DNS configuration on Server0
+- Ping tests between devices
+- Backup execution log
+- Failure and recovery simulation
+
+---
+---
+
+## 🇫🇷 FRANÇAIS
+
+### 📝 Description
+Ce projet simule et documente un petit réseau de bureau avec adressage IP statique, configuration DNS, ressources partagées et sauvegardes automatiques quotidiennes avec simulation de panne et récupération.
+
+---
+
+### 🛠️ Outils Utilisés
+
+| Outil | Rôle |
+|-------|------|
+| Cisco Packet Tracer | Simulation réseau |
+| Robocopy | Sauvegardes automatiques |
+| Planificateur de tâches Windows | Automatisation des backups |
+| Cisco Packet Tracer | Diagramme réseau |
+
+---
+
+### 🖥️ Topologie Réseau
+
+```
+[PC0] ──────┐
+[PC1] ──────┼──── [Switch] ──── [Serveur]
+[PC2] ──────┘         │
+                  [Imprimante]
+```
+
+Le fichier de simulation complet est disponible ici : `network_topology.pkt`
+
+---
+
+### 📋 Tableau des adresses IP
+
+| Équipement | Adresse IP | Masque | Passerelle | Rôle |
+|------------|-----------|--------|------------|------|
+| Server0 | 192.168.1.1 | 255.255.255.0 | 192.168.1.1 | Serveur / DNS |
+| PC0 | 192.168.1.10 | 255.255.255.0 | 192.168.1.1 | Client |
+| PC1 | 192.168.1.11 | 255.255.255.0 | 192.168.1.1 | Client |
+| PC2 | 192.168.1.12 | 255.255.255.0 | 192.168.1.1 | Client |
+| Printer0 | 192.168.1.20 | 255.255.255.0 | 192.168.1.1 | Imprimante réseau |
+
+**Sous-réseau :** 192.168.1.0/24
+
+---
+
+### 🌐 Configuration DNS
+
+Serveur DNS : **192.168.1.1** (Server0)
+
+| Nom d'hôte | Adresse IP |
+|------------|-----------|
+| server.office | 192.168.1.1 |
+| pc0.office | 192.168.1.10 |
+| pc1.office | 192.168.1.11 |
+| pc2.office | 192.168.1.12 |
+| printer.office | 192.168.1.20 |
+
+---
+
+### 💾 Stratégie de Sauvegarde
+
+#### Outil : Robocopy (Windows)
+
+| Paramètre | Valeur |
+|-----------|--------|
+| Source | Clients\PC0, Clients\PC1, Clients\PC2 |
+| Destination | Backup\PC0, Backup\PC1, Backup\PC2 |
+| Fréquence | Tous les jours à 08h00 |
+| Fichier log | Backup\backup_log.txt |
+
+#### Lancement manuel
+```
+scripts\backup.bat
+```
+
+#### Automatisation
+```
+schtasks /create /tn "DailyBackup" /tr "scripts\backup.bat" /sc daily /st 08:00 /f
+```
+
+---
+
+### 🔥 Simulation de Panne et Récupération
+
+#### Simuler une panne
+```
+del Clients\PC0\document1.txt
+```
+
+#### Restaurer depuis le backup
+```
+copy Backup\PC0\document1.txt Clients\PC0\document1.txt
+```
+
+#### Résultat
+✅ Fichier restauré avec succès depuis le backup
+
+---
+
+### 📸 Screenshots
+
+Tous les screenshots sont disponibles dans le dossier `screenshots/` :
+- Topologie réseau (Cisco Packet Tracer)
+- Configuration IP de chaque équipement
+- Configuration DNS sur Server0
+- Tests ping entre équipements
+- Log d'exécution du backup
+- Simulation de panne et récupération

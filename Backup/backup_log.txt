@@ -1,0 +1,96 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  D‚marrageÿ: lundi 29 juin 2026 14:18:08
+   Source : C:\Users\malik\Desktop\log-analysis\Clients\PC0\
+     Dest : C:\Users\malik\Desktop\log-analysis\Backup\PC0\
+
+    Fichiers : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	Nouveau r‚p.       2	C:\Users\malik\Desktop\log-analysis\Clients\PC0\
+	  Nouveau fichier		      38	document1.txt100%  
+	  Nouveau fichier		      38	document2.txt100%  
+
+-------------------------------------------------------------------------------
+
+               Total     Copi‚    Ignor‚Discordance     CHEC    Extras
+     R‚pÿ:         1         1         0         0         0         0
+Fichiersÿ:         2         2         0         0         0         0
+  Octetsÿ:        76        76         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   D‚bitÿ:              76ÿ000 Octets/sec.
+   D‚bitÿ:               4,349 M‚ga-octets/min.
+   Fin : lundi 29 juin 2026 14:18:08
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  D‚marrageÿ: lundi 29 juin 2026 14:18:08
+   Source : C:\Users\malik\Desktop\log-analysis\Clients\PC1\
+     Dest : C:\Users\malik\Desktop\log-analysis\Backup\PC1\
+
+    Fichiers : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	Nouveau r‚p.       2	C:\Users\malik\Desktop\log-analysis\Clients\PC1\
+	  Nouveau fichier		      38	document1.txt100%  
+	  Nouveau fichier		      38	document2.txt100%  
+
+-------------------------------------------------------------------------------
+
+               Total     Copi‚    Ignor‚Discordance     CHEC    Extras
+     R‚pÿ:         1         1         0         0         0         0
+Fichiersÿ:         2         2         0         0         0         0
+  Octetsÿ:        76        76         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   D‚bitÿ:              76ÿ000 Octets/sec.
+   D‚bitÿ:               4,349 M‚ga-octets/min.
+   Fin : lundi 29 juin 2026 14:18:08
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  D‚marrageÿ: lundi 29 juin 2026 14:18:08
+   Source : C:\Users\malik\Desktop\log-analysis\Clients\PC2\
+     Dest : C:\Users\malik\Desktop\log-analysis\Backup\PC2\
+
+    Fichiers : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	Nouveau r‚p.       2	C:\Users\malik\Desktop\log-analysis\Clients\PC2\
+	  Nouveau fichier		      38	document1.txt100%  
+	  Nouveau fichier		      38	document2.txt100%  
+
+-------------------------------------------------------------------------------
+
+               Total     Copi‚    Ignor‚Discordance     CHEC    Extras
+     R‚pÿ:         1         1         0         0         0         0
+Fichiersÿ:         2         2         0         0         0         0
+  Octetsÿ:        76        76         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   D‚bitÿ:              76ÿ000 Octets/sec.
+   D‚bitÿ:               4,349 M‚ga-octets/min.
+   Fin : lundi 29 juin 2026 14:18:08
+
